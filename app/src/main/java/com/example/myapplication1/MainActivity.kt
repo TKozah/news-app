@@ -19,10 +19,10 @@ class MainActivity : AppCompatActivity() {
             LinearLayoutManager.VERTICAL
         )
         val newsList = listOf(
-            News("Title 1", "Description 1", R.mipmap.ic_launcher),
-            News("Title 2", "Description 2", R.mipmap.ic_launcher),
-            News("Title 3", "Description 3", R.mipmap.ic_launcher),
-            News("Title 4", "Description 4", R.mipmap.ic_launcher)
+            News("Basket Ball Updates", "Local team wins championship", R.drawable.sports_basket),
+            News("Technology", "New AI system released worldwide", R.drawable.technology),
+            News("Health", "Doctors discover new treatment", R.drawable.health),
+            News("Business", "Stock market shows strong growth", R.drawable.business)
         )
 
         recyclerView.addItemDecoration(divider)

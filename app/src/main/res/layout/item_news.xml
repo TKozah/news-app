@@ -9,6 +9,7 @@ android:padding="16dp">
     android:id="@+id/newsImage"
     android:layout_width="64dp"
     android:layout_height="64dp"
+    android:scaleType="centerInside"
     android:src="@mipmap/ic_launcher"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"/>
