@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import android.widget.Toast
 
 class NewsAdapter(private val newsList: List<News>) :
     RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
@@ -27,6 +28,13 @@ class NewsAdapter(private val newsList: List<News>) :
         holder.title.text = news.title
         holder.description.text = news.description
         holder.image.setImageResource(news.imageResId)
+        holder.itemView.setOnClickListener {
+            Toast.makeText(
+                holder.itemView.context,
+                news.title,
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 
     override fun getItemCount(): Int = newsList.size
