@@ -14,7 +14,10 @@ class MainActivity : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
-
+        val divider = androidx.recyclerview.widget.DividerItemDecoration(
+            recyclerView.context,
+            LinearLayoutManager.VERTICAL
+        )
         val newsList = listOf(
             News("Title 1", "Description 1", R.mipmap.ic_launcher),
             News("Title 2", "Description 2", R.mipmap.ic_launcher),
@@ -22,6 +25,7 @@ class MainActivity : AppCompatActivity() {
             News("Title 4", "Description 4", R.mipmap.ic_launcher)
         )
 
+        recyclerView.addItemDecoration(divider)
         recyclerView.adapter = NewsAdapter(newsList)
     }
 }
